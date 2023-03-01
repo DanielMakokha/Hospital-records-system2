@@ -1,0 +1,5 @@
+Ward,CaseNumber,AdmittedBy ,Admit Date,Physician,Father,Mother,Charge Account To,Relation To Patient,Address,Tel/Mobile Number,Total Payment For Admitting,Discharge Date,Complaint,CompleteDiagnosis,CompleteMedication,Operations,Anesthesia,Disposition,ConditiontoDischarge,Remarks,IllnessCode
+ICU,3,Neli,2019-03-25,Noa.Santiago,,,,,,,,2019-03-27,, Coughing up blood,Isoniazid,,,,,,
+Male,3,Naig,2019-04-05,Noa.Santiago,,,,,,,,,, Coughing up blood,Isoniazid,,,,,,
+Pulmonary,3,Naig,2019-04-05,Noa.Santiago,,,,,,,,,, Coughing up blood,Isoniazid,,,,,,
+Pulmonary,2,Neli,2019-03-20,Fernando.Buot,,,,,,,,,, Coughing up blood,Isoniazid,,,,,,

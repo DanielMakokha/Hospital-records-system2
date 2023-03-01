@@ -1,0 +1,163 @@
+    
+      
+
+
+          
+              <h1 class="h3 mb-2 text-gray-800 text-center">Admission Form</h1>
+              <hr>
+                 <div class="row "><!-- ROW 1 -->
+                   <div class="col-sm-4"></div>
+                   <div class="col-sm-4">
+                     <h6 class="text-center">Republic of the Philippines</h6> 
+                     <h6 class="text-center">Provincial Government of Rizal</h6>
+                     <h6 class="text-center">Rizal Provincial Health Office</h6>
+                     <h6 class="text-center"><b>RIZAL PROVINCIAL HOSPITAL SYSTEM-BINANGONAN ANNEX</b></h6>
+                     <h5 class="text-center"><b>ADMISSION RECORD</b></h5>
+                   </div>
+                   <div class="col-sm-4"></div>
+                 </div>
+                  <hr>
+              <?php $attributes = array('id' => 'admit_form', 'class' => 'form-horizontal user'); ?>
+               <?php echo form_open('admissioncontrol/admissionform_process', $attributes); ?>
+              
+                   <div class="row"> <!-- ROW 2 -->
+                 <div class="col-xs-6 "><!-- first column -->
+                  <div class="row">
+                   <div  class="col-sm-4"> 
+                    <?php echo form_label('Lastname'); ?>
+                   <input type="text" style="margin-left: 3px;" class="form-control form-control-user <?= (form_error('lname') == "" ? '':'is-invalid') ?>"  name="lname" placeholder="Lastname" value="<?php echo set_value('lname') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('lname'); ?></div>
+                  
+                  </div>
+                   <div class="col-sm-4">
+                    <?php echo form_label('Firstname'); ?>
+                           <input type="text" style="margin-left: 4px;"  class="form-control form-control-user <?= (form_error('fname') == "" ? '':'is-invalid') ?>"  name="fname" placeholder="Firstname" value="<?php echo set_value('fname') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('fname'); ?></div>
+            
+                   </div>
+                   <div class="col-sm-3">
+                    <?php echo form_label('Middlename'); ?>
+                                <input type="text" style="margin-left: 4px;" class="form-control form-control-user <?= (form_error('middlen') == "" ? '':'is-invalid') ?>"  name="middlen" placeholder="Middlename" value="<?php echo set_value('middlen') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('middlen'); ?></div>
+            
+                   </div>    
+                  </div> <!-- End of Row inside a column -->
+                  <?php echo form_label('Address'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('address') == "" ? '':'is-invalid') ?>"  name="address" placeholder="Permanent Address" value="<?php echo set_value('address') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('address'); ?></div>
+                  
+                  <div class="row">
+                    <div class="col-sm-6">      
+                 <?php echo form_label('Occupation'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('occup') == "" ? '':'is-invalid') ?>"  name="occup" placeholder="Occupation" value="<?php echo set_value('occup') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('occup'); ?></div>
+                
+                    </div>
+                    <div class="col-sm-2">
+                       <?php echo form_label('Age'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('age') == "" ? '':'is-invalid') ?>"  name="age" placeholder="Age" value="<?php echo set_value('age') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('age'); ?></div>   
+                    </div>
+                    <div class="col-sm-4">
+                       <?php echo form_label('Gender'); ?>
+                              <select name="gen" class="form-control <?= (form_error('gen') == "" ? '':'is-invalid') ?>">
+                                <option>Select Gender</option>
+                                 <option>Male</option>
+                                 <option>Female</option>
+                              </select>
+                  <div class="text-danger text-center"><?php echo form_error('gen'); ?></div>   
+                    </div>
+                    
+                  </div><!-- End of row -->
+                  <div class="row">
+                    <div class="col-sm-6">
+                       <?php echo form_label('Civil Status'); ?>
+                              <select name="civil" class="form-control <?= (form_error('civil') == "" ? '':'is-invalid') ?>">
+                                <option>Select Civil Status</option>
+                                 <option>Single</option>
+                                 <option>Married</option>
+                                 <option>Separated</option>
+                                 <option>Widow</option>
+                              </select>
+                  <div class="text-danger text-center"><?php echo form_error('civil'); ?></div>   
+                    </div>
+                     <div class="col-sm-6">
+                       <?php echo form_label('Nationality'); ?>
+                                <input style="margin-bottom: 25px;" type="text" class="form-control form-control-user <?= (form_error('nationality') == "" ? '':'is-invalid') ?>"  name="nationality" placeholder="Nationality" value="<?php echo set_value('nationality') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('nationality'); ?></div>    
+                    </div>
+                  </div><!-- End of row -->
+                  
+                  </div> <!-- end of first column-->
+                
+                 <div class="col-xs-6 ">
+                  <div class="row">
+                     <div style="margin-left: 20px;" class="col-xs-6">
+                        <?php echo form_label('Hospital Case No.'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('hospitalcaseno') == "" ? '':'is-invalid') ?>"  name="hospitalcaseno" placeholder="Hospital Case No." value="<?php echo set_value('hospitalcaseno') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('hospitalcaseno'); ?></div>  
+                     </div>
+                      <div style="margin-left: 20px;" class="col-xs-6">
+                           <?php echo form_label('Attending Physician'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('attendphys') == "" ? '':'is-invalid') ?>"  name="attendphys" placeholder="Attending Physician" value="<?php echo set_value('attendphys') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('attendphys'); ?></div> 
+              
+                      </div> 
+                  </div>
+              
+                    <div class="row">
+                      <div style="margin-left: 20px;" class="col-xs-6">
+                        <?php echo form_label('Ward'); ?>
+                              <select name="ward" class="form-control <?= (form_error('ward') == "" ? '':'is-invalid') ?>">
+                                <option value="">Select Ward</option>
+                                 <option value="Male Ward"<?php echo set_select('ward','Male Ward', (!empty($data) && $data == "Male Ward" ? TRUE : FALSE )); ?>>Male Ward</option>
+                                 <option value="Female Ward"<?php echo set_select('ward','Female Ward', (!empty($data) && $data == "Female Ward" ? TRUE : FALSE )); ?>>Female Ward</option>
+                                 <option value="Pulmonary"<?php echo set_select('ward','Pulmonary', (!empty($data) && $data == "Pulmonary" ? TRUE : FALSE )); ?>>Pulmonary </option>
+
+                                 <option value="Intensive Care Unit"<?php echo set_select('ward','Intensive Care Unit', (!empty($data) && $data == "Intensive Care Unit" ? TRUE : FALSE )); ?>>Intensive Care Unit</option>
+                                 <option value="Gyne"<?php echo set_select('ward','Gyne', (!empty($data) && $data == "Gyne" ? TRUE : FALSE )); ?>>Gyne</option>
+                                 <option value="CS"<?php echo set_select('ward','CS', (!empty($data) && $data == "CS" ? TRUE : FALSE )); ?>>CS</option>
+                                 <option value="NSD"<?php echo set_select('ward','NSD', (!empty($data) && $data == "NSD" ? TRUE : FALSE )); ?>>NSD</option>
+                                 <option value="Male Surgical"<?php echo set_select('ward','Male Surgical', (!empty($data) && $data == "Male Surgical" ? TRUE : FALSE )); ?>>Male Surgical</option>
+                                 <option value="Female Surgical"<?php echo set_select('ward','Female Surgical', (!empty($data) && $data == "Female Surgical" ? TRUE : FALSE )); ?>>Female Surgical</option>
+                                 <option value="NICU"<?php echo set_select('ward','NICU', (!empty($data) && $data == "NICU" ? TRUE : FALSE )); ?>>NICU</option>
+                              </select>
+                         <div class="text-danger text-center"><?php echo form_error('ward'); ?></div>   
+                      </div> 
+                       <div style="margin-left: 22px;" class="col-sm-6">
+                           <?php echo form_label('Admitted by'); ?>
+                                <input type="text" class="form-control form-control-user <?= (form_error('admittedby') == "" ? '':'is-invalid') ?>"  name="admittedby" placeholder="Admitted by" value="<?php echo set_value('admittedby') ?>">
+                  <div class="text-danger text-center"><?php echo form_error('admittedby'); ?></div> 
+              
+                      </div> 
+                  </div>
+                  <div class="row">
+                    <div style="margin-left: 20px;" class="col-sm-6">
+                     <?php echo form_label('Date of Birth'); ?>
+                                <input  type="date" class="form-control form-control-user <?= (form_error('datebirth') == "" ? '':'is-invalid') ?>"  name="datebirth" value="<?php echo set_value('datebirth') ?>">
+                 <div class="text-danger text-center"><?php echo form_error('datebirth'); ?></div> 
+                    </div>
+                  </div>
+                 </div>
+                  
+                  <button style="margin-left: 489px;" type="submit" class="btn btn-primary btn-icon-split" name="submit">
+                 <span class="icon text-white-100">
+                  <i class="fas fa-arrow-right"></i>  
+                    Submit
+                  </span>
+                </button>
+                </div><!-- GLOBAL ROW -->
+                   <?php echo form_close(); ?>
+    
+    
+        
+
+ <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>

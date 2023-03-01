@@ -1,0 +1,14 @@
+
+
+
+.fa {
+
+	font-size: 19px;
+	cursor:pointer;
+	color: #999;
+
+}
+
+.fa.active {
+	color:dodgerblue;
+}
